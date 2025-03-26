@@ -1,9 +1,31 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET users listing. */
+/**
+ * @swagger
+ * /users:
+ *   get:
+ *     summary: Liste aller Benutzer abrufen
+ *     description: Gibt eine Liste aller registrierten Benutzer zurück.
+ *     responses:
+ *       200:
+ *         description: Erfolgreiche Antwort
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                     example: 1
+ *                   name:
+ *                     type: string
+ *                     example: Max Mustermann
+ */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.json([{ id: 1, name: 'Max Mustermann' }]);
 });
 
 module.exports = router;
