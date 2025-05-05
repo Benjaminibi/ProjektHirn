@@ -4,6 +4,7 @@ const port = 3000;
 
 // Middleware für JSON-Parsing
 app.use(express.json());
+app.use(express.static('public'));
 
 // Routen einbinden
 const usersRouter = require('./users');  // Importiere users.js
@@ -21,7 +22,7 @@ app.get('/', (req, res) => {
         <body style="font-family:sans-serif; text-align:center; margin-top:50px;">
             <h1>Willkommen bei meiner API</h1>
          
-<img src="public/frontend_asset/Gehirn.png" alt="Gehirn.png" usemap="#image-map">
+<img src="/frontend_asset/Gehirn.png" alt="Gehirn.png" usemap="#image-map">
 
 <map name="image-map">
     <area target="_blank" alt="Occipital_Lobe" title="Occipital_Lobe" href="https://example.com/datei.pdf" coords="536,132,599,234,605,287,585,330,553,334,529,328,509,325,492,323,473,325,478,251,507,180,515,166,522,154,526,138" shape="poly">
