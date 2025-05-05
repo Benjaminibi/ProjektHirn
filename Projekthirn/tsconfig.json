@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Dokumentation",
+    "url": "https://example.com/docs/beispiel.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Bericht",
+    "url": "https://example.com/docs/bericht.pdf"
+  }
+]
