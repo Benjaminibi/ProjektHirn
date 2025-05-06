@@ -2,15 +2,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Middleware für JSON-Parsing
+
 app.use(express.json());
 app.use(express.static('public'));
 
-// Routen einbinden
-const usersRouter = require('./users');  // Importiere users.js
-app.use('/users', usersRouter);  // Registriere die Route unter /users
 
-// Standard-Route
+const usersRouter = require('./users');
+app.use('/users', usersRouter);
+
+
 
 app.get('/', (req, res) => {
     res.send(`
@@ -32,20 +32,16 @@ app.get('/', (req, res) => {
     <area target="_blank" alt="Frontal_Lobe" title="Frontal_Lobe" href="https://example.com/datei.pdf" coords="327,36,244,44,188,56,148,73,103,93,65,119,44,144,27,169,19,196,17,216,24,245,28,262,40,290,63,315,91,333,124,342,146,339,179,286,216,263,251,244,273,242,282,153,338,60,352,37" shape="poly">
     <area target="_blank" alt="Brain_stem" title="Brain_stem" href="https://example.com/datei.pdf" coords="318,414,412,504,440,499,345,404,341,368,308,369,295,375,289,386,299,405" shape="poly">
 </map>
-            <a href="/backend_asset/Parietallappen.pdf" target="_blank">
-                <button style="font-size: 1.2em; padding: 10px 20px;">PDF öffnen</button>
-            </a>
         </body>
         </html>
     `);
 });
 
 
-// Swagger-Dokumentation einbinden
 const swaggerSetup = require('./swagger');
 swaggerSetup(app);
-const pdfsRouter = require('./routes'); // ← das lädt die Route
-app.use('/pdfs', pdfsRouter);                // ← das registriert sie unter /pdfs
+const pdfsRouter = require('./routes');
+app.use('/pdfs', pdfsRouter);
 
 
 
