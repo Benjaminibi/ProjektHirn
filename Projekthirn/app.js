@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 <img src="/frontend_asset/Gehirn.png" alt="Gehirn.png" usemap="#image-map">
 
 <map name="image-map">
-    <area target="_blank" alt="Occipital_Lobe" title="Occipital_Lobe" href="https://example.com/datei.pdf" coords="536,132,599,234,605,287,585,330,553,334,529,328,509,325,492,323,473,325,478,251,507,180,515,166,522,154,526,138" shape="poly">
+    <area target="_blank" alt="Occipital_Lobe" title="Occipital_Lobe" href="backend_asset/Okzipitallappen.pdf" coords="536,132,599,234,605,287,585,330,553,334,529,328,509,325,492,323,473,325,478,251,507,180,515,166,522,154,526,138" shape="poly">
     <area target="_blank" alt="Temporal_Lobe" title="Temporal_Lobe" href="https://example.com/datei.pdf" coords="360,198,477,247,470,323,350,364,310,363,278,383,258,396,231,404,210,403,193,396,156,369,150,341,169,302,197,273,283,237,307,225,321,220" shape="poly">
     <area target="_blank" alt="Cerebellum" title="Cerebellum" href="https://example.com/datei.pdf" coords="350,364,488,325,551,335,553,378,535,407,514,432,493,449,472,459,433,463,404,460,388,456,363,427,348,401" shape="poly">
     <area target="_blank" alt="Parietal_Lobe" title="Parietal_Lobe" href="backend_asset/Parietallappen.pdf" coords="357,35,432,46,492,83,533,124,509,170,492,210,477,246,367,197,317,217,271,241,286,159,305,110,331,78" shape="poly">
