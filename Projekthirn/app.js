@@ -5,10 +5,10 @@ const port = 3000;
 app.use(express.json());
 app.use(express.static('public'));
 app.get('/okzipitallappen', (req, res) => {
-    res.sendFile(__dirname + '/views/Okzipitallappen.html');
+    res.sendFile(__dirname + '/views/Occipital_Lobe.html');
 });
 app.get('/parietallappen', (req, res) => {
-    res.sendFile(__dirname + '/views/Parietallappen.html');
+    res.sendFile(__dirname + '/views/Parietal_Lobe.html');
 });
 
 
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
     <area target="_blank" alt="Cerebellum" title="Cerebellum" href="https://example.com/datei.pdf" coords="350,364,488,325,551,335,553,378,535,407,514,432,493,449,472,459,433,463,404,460,388,456,363,427,348,401" shape="poly">
     <area target="_blank" alt="Parietal_Lobe" title="Parietal_Lobe" href="/Parietallappen" coords="357,35,432,46,492,83,533,124,509,170,492,210,477,246,367,197,317,217,271,241,286,159,305,110,331,78" shape="poly">
     <area target="_blank" alt="Frontal_Lobe" title="Frontal_Lobe" href="https://example.com/datei.pdf" coords="327,36,244,44,188,56,148,73,103,93,65,119,44,144,27,169,19,196,17,216,24,245,28,262,40,290,63,315,91,333,124,342,146,339,179,286,216,263,251,244,273,242,282,153,338,60,352,37" shape="poly">
-    <area target="_blank" alt="Brain_stem" title="Brain_stem" href="https://example.com/datei.pdf" coords="318,414,412,504,440,499,345,404,341,368,308,369,295,375,289,386,299,405" shape="poly">
+    <area target="_blank" alt="Brain_stem" title="Brain_stem" href="frontend_lists/Brain_stem.js" coords="318,414,412,504,440,499,345,404,341,368,308,369,295,375,289,386,299,405" shape="poly">
 </map>
         </body>
         </html>
