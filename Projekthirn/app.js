@@ -2,15 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-
 app.use(express.json());
 app.use(express.static('public'));
-
-
-const usersRouter = require('./users');
-app.use('/users', usersRouter);
-
-
 
 app.get('/', (req, res) => {
     res.send(`
@@ -37,13 +30,10 @@ app.get('/', (req, res) => {
     `);
 });
 
-
 const swaggerSetup = require('./swagger');
 swaggerSetup(app);
 const pdfsRouter = require('./routes');
 app.use('/pdfs', pdfsRouter);
-
-
 
 // Server starten
 app.listen(port, () => {
