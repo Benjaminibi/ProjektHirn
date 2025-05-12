@@ -39,9 +39,6 @@ app.get('/', (req, res) => {
 });
 
 
-const pdfsRouter = require('./routes');
-app.use('/pdfs', pdfsRouter);
-
 // Server starten
 app.listen(port, () => {
     console.log(`Server läuft auf http://localhost:${port}`);
