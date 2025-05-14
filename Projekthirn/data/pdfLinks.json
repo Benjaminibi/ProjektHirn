@@ -8,5 +8,25 @@
     "id": 2,
     "title": "Okzipitallappen",
     "url": "backend_asset/Okzipitallappen.pdf"
+  },
+  {
+    "id": 3,
+    "title": "Frontallappen",
+    "url": "backend_asset/Frontallappen.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Hirnstamm",
+    "url": "backend_asset/Hirnstamm.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Temporallappen",
+    "url": "backend_asset/Temporallappen.pdf"
+  },
+  {
+    "id": 6,
+    "title": "Zerebrellum",
+    "url": "backend_asset/Zerebrellum.pdf"
   }
 ]

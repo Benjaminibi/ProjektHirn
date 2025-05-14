@@ -1,14 +1,16 @@
+
 const express = require('express');
-const path = require('path');
 const app = express();
 const port = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+const backend = require('./backend');
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'frontend', 'frontend.html'));
-});
+app.use(express.json());
 
-app.listen(port, () => {
-    console.log(`Server läuft auf http://localhost:${port}`);
+
+backend(app);
+
+
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server läuft unter http://localhost:${port}`);
 });
