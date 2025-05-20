@@ -12,7 +12,7 @@ try {
     console.error('Fehler beim Laden der JSON-Datei:', err);
 }
 const backend = (app) => {
-    app.use('/pdfs', express.static(path.join(__dirname, 'public', 'pdfs')));
+    app.use('/backend_asset', express.static(path.join(__dirname, 'public', 'backend_asset')));
 
     app.get('/:lappen', (req, res) => {
         const requestedLobe = req.params.lappen.toLowerCase();
@@ -25,7 +25,7 @@ const backend = (app) => {
             res.json({
                 id: found.id,
                 name: found.title,
-                url: `/pdfs/${path.basename(found.url)}`
+                url: `/backend_asset/${path.basename(found.url)}`
             });
         } else {
             res.status(404).json({ error: 'PDF nicht gefunden' });
